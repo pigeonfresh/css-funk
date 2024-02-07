@@ -1,0 +1,37 @@
+@import './utils';
+
+* {
+    box-sizing: border-box;
+    min-inline-size: 0;
+    position: relative;
+}
+
+html,
+body {
+    min-block-size: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: red transparent;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+}
+
+.section {
+    min-block-size: 100vh;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(45deg, white, rgb(188, 184, 184));
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

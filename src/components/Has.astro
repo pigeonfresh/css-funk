@@ -1,0 +1,22 @@
+<section class="section">
+    <div class="card">
+        <h2>hello</h2>
+        <input type="text" />
+    </div>
+</section>
+
+<style lang="scss">
+    .card {
+        padding: 20px;
+        background: white;
+        border: 1px solid black;
+    }
+
+    .card:has(input:focus-within) {
+        background: red;
+    }
+
+    // .card:has(input:focus-within) h2 {
+    //     background: yellow;
+    // }
+</style>

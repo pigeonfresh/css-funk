@@ -1,0 +1,30 @@
+<section class="section">
+    <div class="wrapper">
+        <div class="card">
+            <h1>Blue</h1>
+        </div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+</section>
+
+<style lang="scss">
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-inline: auto;
+        gap: 10px;
+    }
+
+    .card {
+        aspect-ratio: 1;
+    }
+
+    .card:has(h1) {
+        background: blue;
+    }
+
+    .card:not(:has(h1)) {
+        background: magenta;
+    }
+</style>

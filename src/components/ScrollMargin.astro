@@ -1,0 +1,21 @@
+<section class="section">
+    <div id="foo">
+        <a href="#foo">Go to foo</a>
+    </div>
+</section>
+
+<style lang="scss">
+    html {
+        // --sticky-header-height: 100px;
+        scroll-behavior: auto;
+
+        @media not (prefers-reduced-motion: reduce) {
+            scroll-behavior: smooth;
+        }
+    }
+
+    #foo {
+        scroll-margin-block-start: 200px;
+        // scroll-margin-block-start: var(--sticky-header-height, 0px);
+    }
+</style>

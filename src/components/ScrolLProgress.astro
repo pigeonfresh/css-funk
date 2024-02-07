@@ -1,0 +1,23 @@
+<section class="bar"></section>
+
+<style lang="scss">
+    html {
+        scroll-timeline: --page-scroll block;
+    }
+
+    @keyframes translate {
+        from {
+            translate: -100% 0;
+        }
+    }
+
+    .bar {
+        position: fixed;
+        inset: 0 0 auto;
+        background: magenta;
+        block-size: 10px;
+        z-index: 1;
+        animation: translate 1s none;
+        animation-timeline: --page-scroll;
+    }
+</style>

@@ -1,0 +1,57 @@
+<section class="section">
+    <div class="card">
+        <picture>
+            <img
+                src="https://images.unsplash.com/photo-1706859872183-a500efab7ef7?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+            />
+        </picture>
+    </div>
+</section>
+
+<style lang="scss">
+    // @keyframes skew {
+    //     from {
+    //         --offset: 0%;
+    //     }
+    //     to {
+    //         --offset: 10%;
+    //     }
+    // }
+
+    .card {
+        --offset: 0%;
+        inline-size: min(90%, 400px);
+        aspect-ratio: 9 / 16;
+        background: white;
+        clip-path: polygon(
+            0 var(--offset),
+            100% 0,
+            100% calc(100% - var(--offset)),
+            0% 100%
+        );
+        animation: skew 1s infinite alternate;
+    }
+
+    picture {
+        &,
+        img {
+            inline-size: 100%;
+            block-size: 100%;
+        }
+
+        img {
+            display: block;
+            object-fit: cover;
+        }
+    }
+</style>
+
+<script>
+    // CSS.registerProperty({
+    //     name: "--offset",
+    //     syntax: "<percentage>",
+    //     inherits: false,
+    //     initialValue: "0%",
+    // });
+</script>

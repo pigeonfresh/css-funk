@@ -1,0 +1,99 @@
+<section class="section">
+    <div class="item">
+        <h2>Hello world</h2>
+    </div>
+</section>
+<section class="section">
+    <ul class="card-wrapper">
+        <li>
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                />
+                <div>
+                    <h1>hello world</h1>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                />
+                <div>
+                    <h1>hello world</h1>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1533154683836-84ea7a0bc310?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt=""
+                />
+                <div>
+                    <h1>hello world</h1>
+                </div>
+            </div>
+        </li>
+    </ul>
+</section>
+
+<style lang="scss">
+    .item {
+        // container-type: inline-size;
+        width: 200px;
+        display: grid;
+        resize: horizontal;
+        overflow: hidden;
+
+        text-align: center;
+        padding: 20px;
+        background: red;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 10cqw;
+        // font-size: clamp(20px, 10cqw, 80px);
+
+        // @container (inline-size > 400px) {
+        //     background: blue;
+        // }
+    }
+
+    .card-wrapper {
+        inline-size: min(90vw, 100%);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+
+        > li {
+            container-type: inline-size;
+        }
+    }
+
+    .card {
+        display: grid;
+        background: red;
+
+        @container (inline-size > 480px) {
+            // grid-template: auto / 1fr 1fr;
+        }
+
+        > div {
+            padding: 20px;
+            background: white;
+        }
+
+        img {
+            aspect-ratio: 1;
+            display: block;
+            inline-size: 100%;
+            block-size: 100%;
+            object-fit: cover;
+        }
+    }
+</style>

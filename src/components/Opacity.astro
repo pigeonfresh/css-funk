@@ -1,0 +1,65 @@
+<section class="section">
+    <div class="card stack">
+        <picture>
+            <img
+                src="https://images.unsplash.com/photo-1706859872183-a500efab7ef7?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt=""
+            />
+        </picture>
+        <div class="content">
+            <h1>Lorem, ipsum.</h1>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .card {
+        inline-size: min(90%, 400px);
+        aspect-ratio: 9 / 16;
+        background: white;
+    }
+
+    picture {
+        &,
+        img {
+            inline-size: 100%;
+            block-size: 100%;
+        }
+
+        img {
+            object-fit: cover;
+        }
+    }
+
+    .stack {
+        display: grid;
+
+        > * {
+            grid-area: 1 / 1;
+        }
+    }
+
+    .content {
+        --content-background: linear-gradient(transparent, black);
+        --content-background-opacity: 0.5;
+        --inset-block-start: -120px;
+        //
+        padding: 20px;
+        align-self: end;
+        color: white;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: var(--inset-block-start) 0 0;
+            background: var(--content-background);
+            opacity: var(--content-background-opacity);
+        }
+
+        @media (prefers-reduced-transparency) {
+            --content-background: black;
+            --content-background-transparency: 0.8;
+            --inset-block-start: 0;
+        }
+    }
+</style>
