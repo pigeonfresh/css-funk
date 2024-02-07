@@ -57,11 +57,11 @@
     h2 {
         margin: 0;
         font-size: 10cqw;
-        // font-size: clamp(20px, 10cqw, 80px);
+        font-size: clamp(20px, 10cqw, 80px);
 
-        // @container (inline-size > 400px) {
-        //     background: blue;
-        // }
+        @container (inline-size > 400px) {
+            background: blue;
+        }
     }
 
     .card-wrapper {
@@ -80,7 +80,7 @@
         background: red;
 
         @container (inline-size > 480px) {
-            // grid-template: auto / 1fr 1fr;
+            grid-template: auto / 1fr 1fr;
         }
 
         > div {
